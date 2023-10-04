@@ -23,7 +23,7 @@ public class TwoLargestNumber {
                 secondLargestNumber = numbers;
             }
         }
-        System.out.println(largestNumber);
-        System.out.println(secondLargestNumber);
+        System.out.println("The largestNumber is: " + largestNumber);
+        System.out.println("The secondLargestNumber is: " + secondLargestNumber);
     }
 }

@@ -20,21 +20,30 @@ public class AnalyzingExamResult {
         return total;
     }
 
-    public int resultSummary(int score) {
+    public String resultSummaryOfPeoplePassed(int score) {
         int total = 0;
-        total+=score;
-
         int pass = 0;
-        int fail = 0;
-
+        for (int counter =0; counter<=10; counter++) {
+            total += score;
+        }
         if (total >= 50) {
-            pass++;
+            pass = pass + 1;
+        }
+        String newPass = String.valueOf(pass);
+        return newPass;
+    }
+
+    public String resultSummaryOfPeopleFailed(int score) {
+        int total = 0;
+        int fail = 0;
+        for (int counter =0; counter<=10; counter++) {
+            total += score;
         }
         if (total < 50) {
-            fail++;
+            fail = fail + 1;
         }
-       String newValue = String.valueOf(pass);
-        String newValue1 = String.valueOf(fail);
-        return Integer.parseInt(newValue + newValue1);
+        String newFail = String.valueOf(fail);
+        return newFail;
     }
+
 }

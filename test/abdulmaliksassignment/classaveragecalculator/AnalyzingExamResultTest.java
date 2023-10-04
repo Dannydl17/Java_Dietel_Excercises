@@ -35,25 +35,28 @@ public class AnalyzingExamResultTest {
     @Test
     public void testThatAnalyzingExamResultCanCountTheNumberScoreEnteredTest() {
         AnalyzingExamResult analyzingExamResult = new AnalyzingExamResult();
-        int testScore = analyzingExamResult.collectTestScore(20);
-        int total = 0;
+        int testScore = analyzingExamResult.collectTestScore(50);
         for (int count = 1; count <= 10; count++) {
-            total = analyzingExamResult.countTestScore(testScore);
+            analyzingExamResult.countTestScore(testScore);
+            testScore++;
         }
-        assertEquals(20, total);
+        assertEquals(60,testScore);
     }
 
     @Test
-    public void testThatAnalyzingExamResultCanDisplayTheNumberOfStudentResultTest() {
+    public void testThatAnalyzingExamResultCanDisplayTheNumberOfStudentResultWhoPassedTest() {
         AnalyzingExamResult analyzingExamResult = new AnalyzingExamResult();
-        int testScore = analyzingExamResult.collectTestScore(20);
-        int total = 0;
-        int answer = 0;
-        for (int count = 1; count <= 10; count++) {
-            total = analyzingExamResult.countTestScore(testScore);
-            answer = analyzingExamResult.resultSummary(total);
-        }
-        assertEquals(20, total);
+        int testScore = analyzingExamResult.collectTestScore(70);
+        int answer = Integer.parseInt(String.valueOf(analyzingExamResult.resultSummaryOfPeoplePassed(testScore)));
+        assertEquals(1, answer);
+       }
+
+    @Test
+    public void testThatAnalyzingExamResultCanDisplayTheNumberOfStudentResultWhoFailedTest() {
+        AnalyzingExamResult analyzingExamResult = new AnalyzingExamResult();
+        int testScore = analyzingExamResult.collectTestScore(40);
+        int answer = Integer.parseInt(String.valueOf(analyzingExamResult.resultSummaryOfPeopleFailed(testScore)));
+        assertEquals(1, answer);
     }
 
 
