@@ -1,8 +1,6 @@
 package leetecode;
 
-import java.util.Arrays;
-
-public class SumArrays {
+public class TargetNumberIndex {
 
     public static int[] calculateAddition(int[] numberAdded, int targetNumber) {
         int[] sumIndex = new int[2];

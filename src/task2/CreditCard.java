@@ -52,7 +52,7 @@ public class CreditCard {
         for (int index = 0; index < number.length(); index++) {
             numbers[count] = Integer.parseInt(String.valueOf(number.charAt(index)));
             count++;
-        }
+         }
 
         int counter = 0;
         for (int index = numbers.length-2; index >=0; index-=2) {
@@ -64,14 +64,14 @@ public class CreditCard {
         int num = 0;
         for (int index = numbers.length - 2; index>=0; index-=2) {
             int multiply = numbers[index] * 2;
-            if (multiply > 9){
+              if (multiply > 9){
                 evenNumber[newIndex] = (multiply / 10) + (multiply % 10);
             }else evenNumber[newIndex] = multiply;
             newIndex++;
 //            System.out.println(multiply);
-        }
+          }
         for (int index = 0; index < evenNumber.length; index++) {
-            num+=evenNumber[index];
+              num+=evenNumber[index];
         }
         return num;
     }

@@ -1,2 +1,4 @@
-package leeteCode;public class RemoveElement {
+package leeteCode;
+
+public class RemoveElement {
 }
