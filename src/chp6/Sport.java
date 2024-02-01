@@ -7,12 +7,12 @@ public class Sport {
         testSportsRecommender(35);
     }
 
-            public static void testSportsRecommender(double temperatureCelsius) {
+            public static void testSportsRecommender(int temperatureCelsius) {
                 String recommendation = sportsRecommender(temperatureCelsius);
                 System.out.println("Temperature: " + recommendation);
             }
 
-            public static String sportsRecommender(double temperatureCelsius) {
+            public static String sportsRecommender(int temperatureCelsius) {
                 if (temperatureCelsius >= 20 && temperatureCelsius <= 30) {
                     return "It’s lovely weather for sports today!";
                 }

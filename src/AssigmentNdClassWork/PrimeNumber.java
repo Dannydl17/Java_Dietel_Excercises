@@ -8,12 +8,9 @@ public class PrimeNumber {
         System.out.println("Enter a number ");
         Scanner sc=new Scanner(System.in);
         int number=sc.nextInt();
-        for(int counter=1;counter<=number;counter++)
-        {
-            if(number%counter==0)
-            {
+        for(int counter=1;counter<=number;counter++){
+            if(number%counter==0){
                 count++;
-
             }
         }
         if(count==2)

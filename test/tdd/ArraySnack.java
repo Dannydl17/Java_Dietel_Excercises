@@ -111,15 +111,15 @@
 ////    }
 ////
 ////
-////    public static boolean isPalindrome(String[] element) {
-////        String reverse = "";
-////        String name = String.valueOf(element.length);
-////        for (int count =element.length -1; count>=0; count--) {
-////            reverse =    + name.charAt(count);
-////        }
-////        if (reverse.equals(name)) {
-////            return true;
-////        }
+//    public static boolean isPalindrome(String[] element) {
+//        String reverse = "";
+//        String name = String.valueOf(element.length);
+//        for (int count =element.length -1; count>=0; count--) {
+//            reverse =    + name.charAt(count);
+//        }
+//        if (reverse.equals(name)) {
+//            return true;
+//        }
 ////        return false;
 ////    }
 ////

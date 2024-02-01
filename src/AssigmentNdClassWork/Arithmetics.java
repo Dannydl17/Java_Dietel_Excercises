@@ -20,6 +20,5 @@ public class Arithmetics {
         System.out.printf("SquareB is : %d%n ", squareB);
         System.out.println("Sum is " + sum);
         System.out.println("Difference is " + difference);
-
     }
 }

@@ -1,4 +1,4 @@
-package tdd;
+package assignments;
 
 public class Account {
 

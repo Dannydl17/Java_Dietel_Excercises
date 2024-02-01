@@ -8,7 +8,7 @@ public class Palindrome {
         numbers = originalNumber;
         int reversedNumber = 0;
 
-        while (numbers != 0){
+        while (numbers > 0){
             int remainder = numbers % 10;
             reversedNumber = (reversedNumber * 10)+ remainder;
             numbers = numbers / 10;

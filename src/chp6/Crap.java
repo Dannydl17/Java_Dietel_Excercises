@@ -25,7 +25,7 @@ public class Crap {
         System.out.println("Enter a wager: ");
         int wagerAmount = keyboardInput.nextInt();
 
-        if (wagerAmount >= bankBalance) {
+        if (wagerAmount <= bankBalance) {
 
         }
         if (wagerAmount != bankBalance) {
