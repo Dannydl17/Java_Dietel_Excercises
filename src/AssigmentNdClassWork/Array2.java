@@ -3,18 +3,36 @@ package AssigmentNdClassWork;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class ArrayExercise3 {
-    public static int[]canReturnHcf(int[] nums, int divisor) {
+public class Array2 {
+    public static void main(String[] args) {
+        int[]nums = new int[]{8,4,12};
+        int numberDivide = 2;
+        System.out.println(Arrays.toString(divideTwiceArray(nums, numberDivide)));
+//        if (divideAnArray1(nums, numberDivide)){
+//            nums = divideAnArray(nums, numberDivide);
+////            numbers.add(numberDivide);
+//        }
+//        System.out.println(numbers);
+////        System.out.println(Arrays.toString(divideAnArray(nums, numberDivide)));
+//        System.out.println(divideAnArray1(nums, numberDivide));
+    }
+    public static int[] divideAnArray(int[]numbers, int divisor){
+        for (int counter = 0; counter < numbers.length;counter++) {
+                numbers[counter] /= divisor;
+        }
+        return numbers;
+    }
+    public static int[] divideTwiceArray(int[]nums, int divisor) {
         ArrayList<Integer> numbers = new ArrayList<>();
-        int num1 = divideFirstArray(nums,divisor);
+        int num1 = divideFirstArray(nums, divisor);
         int num2 = divideSecond(nums, divisor);
 
-        if (num1 == divisor) {
-            numbers.add(divisor);
-        }
-        if (num2 == divisor) {
-            numbers.add(divisor);
-        }
+            if (num1 == divisor) {
+                numbers.add(divisor);
+            }
+            if (num2 == divisor) {
+                numbers.add(divisor);
+            }
         return convertToArray(numbers) ;
     }
 
@@ -26,12 +44,6 @@ public class ArrayExercise3 {
         return results;
     }
 
-    public static int[] divideAnArray(int[]numbers, int divisor){
-        for (int counter = 0; counter < numbers.length;counter++) {
-            numbers[counter] /= divisor;
-        }
-        return numbers;
-    }
     public static int divideFirstArray(int[]nums, int divisor){
         int counter = 0;
         for (int count = 0; count < nums.length; count++) {
@@ -66,4 +78,3 @@ public class ArrayExercise3 {
         return divisor;
     }
 }
-

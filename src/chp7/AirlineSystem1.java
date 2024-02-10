@@ -38,9 +38,10 @@ public class AirlineSystem1 {
         int typesBooking = keyboardInput.nextInt();
         String result = validateResult();
         if (typesBooking == 1) {
-            if (!result.isEmpty())return result;
+            if (!result.isEmpty()) return result;
             else return firstClass1();
-        }else if (typesBooking == 2){
+        }
+        if (typesBooking == 2){
             return economyClass1();
         }else {
             return "invalid input";
@@ -53,6 +54,17 @@ public class AirlineSystem1 {
         for (int count = 0; count < 5; count++) {
             if (!seatingChart[count]) break;
             if (count == 4) {
+                answers = "Seat already taking";
+            }
+        }
+        return answers;
+    }
+
+    private static String validateResult1() {
+        String answers = "";
+        for (int count = 5; count < 9; count++) {
+            if (!seatingChart[count]) break;
+            if (count == 9) {
                 answers = "Seat already taking";
             }
         }

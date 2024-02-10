@@ -38,6 +38,7 @@ public class AirlineSystem {
 
     public static String firstClass(){
         int value = generate();
+        System.out.println(value);
         String result = "";
         for (int count1 = 0; count1 < seatingCharts.length; count1++) {
             if (count1 == value) {
