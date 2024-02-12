@@ -18,10 +18,8 @@ class ArrayExercise3Test {
     }
     @Test
     public void testThatArrayExercise3CanReturnLcmTest(){
-        int[] nums = {18};
-        int num1 = 2;
-        int[]result =  ArrayExercise3.canReturnLcm(nums, num1);
-        System.out.println(Arrays.toString(result));
+        int nums = 18;
+        int[]result =  ArrayExercise3.canReturnLcm(nums);
         assertArrayEquals(new int[]{2,3,3}, result);
     }
 }

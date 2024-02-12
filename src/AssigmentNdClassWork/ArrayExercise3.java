@@ -66,20 +66,18 @@ public class ArrayExercise3 {
         return divisor;
     }
 
-    public static int[] canReturnLcm(int[] nums, int divisor){
+    public static int[] canReturnLcm(int number){
         ArrayList<Integer> number1 = new ArrayList<>();
-        for (int count = 0; count < nums.length; count++) {
-            if (nums[count] % divisor == 0) {
-                divideAnArray(nums, divisor);
+        int divisor = 2;
+        while (number > 1){
+            if (number % divisor == 0){
                 number1.add(divisor);
+                number = number / divisor;
+                divisor = 2;
             }
-            else if (nums[count] == 1) {
-                break;
-            }
-            else  {
+            else {
                 divisor++;
             }
-            count--;
         }
         return convertToArray(number1);
     }
