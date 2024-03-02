@@ -1,21 +1,24 @@
 package AssigmentNdClassWork;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Arrays;
+
+import static AssigmentNdClassWork.Array3.checkingAnArray;
 
 public class ArrayExercise3 {
-    public static int[]canReturnHcf(int[] nums, int divisor) {
+    public static int[]canReturnHcf(int[] nums) {
         ArrayList<Integer> numbers = new ArrayList<>();
-        int num1 = divideFirstArray(nums,divisor);
-        int num2 = divideSecond(nums, divisor);
-
-        if (num1 == divisor) {
-            numbers.add(divisor);
+        int[] factor = canReturnFactors(nums[0]);
+        for (int counter = 0; counter < factor.length; counter++){
+            if (checkingAnArray(nums, factor[counter])){
+                numbers.add(factor[counter]);
+                divideAnArray(nums, factor[counter]);
+            }
         }
-        if (num2 == divisor) {
-            numbers.add(divisor);
-        }
-        return convertToArray(numbers) ;
+        return convertToArray(numbers);
     }
 
     private static int[] convertToArray(ArrayList<Integer> numbers) {
@@ -25,6 +28,8 @@ public class ArrayExercise3 {
         }
         return results;
     }
+
+
 
     public static int[] divideAnArray(int[]numbers, int divisor){
         for (int counter = 0; counter < numbers.length;counter++) {
@@ -37,13 +42,13 @@ public class ArrayExercise3 {
         for (int count = 0; count < nums.length; count++) {
             if (nums[count] % divisor == 0) {
                 counter++;
-            } else if (nums[count] % divisor != 0) {
+            }
+            else {
                 divisor++;
                 count--;
             }
-
         }
-        if (counter == 3) {
+        if (counter == counter) {
             nums = divideAnArray(nums, divisor);
         }
         return divisor;
@@ -54,13 +59,12 @@ public class ArrayExercise3 {
         for (int count1 = 0; count1 < nums.length; count1++) {
             if (nums[count1] % divisor == 0) {
                 counter++;
-            } else if (nums[count1] % divisor != 0) {
+            } else {
                 divisor++;
-                count1--;
+                counter--;
             }
-
         }
-        if (counter == 3) {
+        if (counter == counter) {
             nums = divideAnArray(nums, divisor);
         }
         return divisor;
@@ -79,6 +83,18 @@ public class ArrayExercise3 {
                 divisor++;
             }
         }
+        return convertToArray(number1);
+    }
+
+    public static int[] canReturnFactors(int nums) {
+      ArrayList<Integer> number1 = new ArrayList<>();
+      int divideNumber = 2;
+      while (divideNumber <= nums){
+          if (nums % divideNumber ==0) {
+              number1.add(divideNumber);
+          }
+         divideNumber++;
+      }
         return convertToArray(number1);
     }
 }

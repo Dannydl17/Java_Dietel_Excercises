@@ -5,15 +5,7 @@ import java.util.Scanner;
 
 import static java.lang.System.in;
 
-/*
-TODO: 12/26/2023
-   1.) Create An Array That Has of length 10 with -1 as the default value in each cell
-   2.) Collect 10 integer values that is between 10 and 100 from the user
-   3.) Assign The 10 integer values collected from the user into the array
-   4.) Start Eliminating The Duplicates
-FIXME: 12/26/2023 : How Do We Eliminates The Duplicates
 
-*/
 public class DuplicateElimination {
      Scanner scanner = new Scanner(in);
     int[] integers = new int[]{-1, -1, -1, -1, -1, -1, -1, -1, -1, -1};

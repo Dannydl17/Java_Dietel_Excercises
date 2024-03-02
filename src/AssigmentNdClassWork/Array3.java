@@ -4,9 +4,9 @@ public class Array3 {
     public static void main(String[] args) {
         int[]nums = new int[]{8,4,12};
         int numberDivide = 2;
-        System.out.println(divideAnArray1(nums, numberDivide));
+        System.out.println(checkingAnArray(nums, numberDivide));
     }
-    public static boolean divideAnArray1(int[]numbers, int divisor){
+    public static boolean checkingAnArray(int[]numbers, int divisor){
         int counter = 0;
         for (int count = 0; count < numbers.length; count++) {
             if (numbers[count]% divisor ==0) {
@@ -14,7 +14,6 @@ public class Array3 {
             }
         }
         if (counter == 3 ) {
-            divideAnArray(numbers, divisor);
             return true;
         }
         return false;

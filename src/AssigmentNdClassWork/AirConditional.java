@@ -1,7 +1,6 @@
-package tdd;
+package AssigmentNdClassWork;
 
 public class AirConditional {
-
 
     private boolean isOn;
     private int temperature;
