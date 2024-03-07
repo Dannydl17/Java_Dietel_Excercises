@@ -1,10 +1,10 @@
 package cardApp;
 
-public class Cards {
+public class Card {
     private String face;
     private String suit;
 
-    public Cards(String cardFace, String cardSuit){
+    public Card(String cardFace, String cardSuit){
         this.face = cardFace;
         this.suit = cardSuit;
     }
