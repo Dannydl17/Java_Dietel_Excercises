@@ -13,8 +13,9 @@ public class Array3 {
                 counter++;
             }
         }
-        if (counter == 3 ) {
-            return true;
+        if (counter == numbers.length ) {
+            divideAnArray(numbers, divisor);
+//            return true;
         }
         return false;
     }

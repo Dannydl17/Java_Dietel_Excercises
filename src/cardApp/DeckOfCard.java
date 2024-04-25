@@ -113,4 +113,49 @@ public class DeckOfCard {
         }
         return false;
     }
+
+    public boolean isFlush(Card[] cards) {
+        int counter = 0;
+        for (int count = 0; count < cards.length; count++) {
+            for (int innerCount = count+1; innerCount < cards.length; innerCount++) {
+                if (cards[count].getSuit().equals(cards[innerCount].getSuit())) {
+                     counter++;
+                }
+            }
+            if (counter == 4) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isStraight(Card[] cards) {
+        int counter = 0;
+        for (int count = 0; count < cards.length; count++) {
+            for (int innerCount = count+1; innerCount < cards.length; innerCount++) {
+                if (cards[count].getSuit().equals(cards[innerCount].getSuit())) {
+                    counter++;
+                }
+            }
+            if (counter == 1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isFullHouse(Card[] cards) {
+        int counter = 0;
+        for (int count = 0; count < cards.length; count++) {
+            for (int innerCount = count+1; innerCount <cards.length; innerCount++) {
+                if (cards[count].getFace().equals(cards[innerCount].getFace())) {
+                     counter++;
+                }
+            }
+        }
+        if (counter == 4) {
+            return true;
+        }
+        return false;
+    }
 }

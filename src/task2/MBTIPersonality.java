@@ -29,9 +29,9 @@ public class MBTIPersonality {
         };
 
         Scanner keyboardInput = new Scanner(System.in);
-//        System.out.println("What is your name:   ");
-//        String name = keyboardInput.nextLine();
-//        prompt(name);
+        System.out.println("What is your name:   ");
+        String name = keyboardInput.nextLine();
+        prompt(name);
         displayResponses(letters);
     }
 

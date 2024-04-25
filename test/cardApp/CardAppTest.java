@@ -63,6 +63,49 @@ class CardAppTest {
               DeckOfCard deckOfCard = new DeckOfCard();
 //              assertFalse(deckOfCard.isPair(cards));
               assertTrue(deckOfCard.isFourPair(cards));
+
+       }
+
+       @Test
+       public void testThatDeckOfCardCanHaveAFlushOfAKindCardTest(){
+              Card[] cards = new Card[5];
+              cards[0] = new Card("Seven", "Diamond");
+              cards[1] = new Card("Six", "Diamond");
+              cards[2] = new Card("Jack", "Diamond");
+              cards[3] = new Card("Four", "Diamond");
+              cards[4] = new Card("Nine", "Diamond");
+//            cards[4] = new Card("Ace", "Spade");
+              DeckOfCard deckOfCard = new DeckOfCard();
+//              assertFalse(deckOfCard.isPair(cards));
+              assertTrue(deckOfCard.isFlush(cards));
+       }
+
+       @Test
+       public void testThatDeckOfCardCanHaveAStraightCardTest(){
+              Card[] cards = new Card[5];
+              cards[0] = new Card("Seven", "Diamond");
+              cards[1] = new Card("Six", "Club");
+              cards[2] = new Card("Jack", "Spade");
+              cards[3] = new Card("Four", "Heart");
+              cards[4] = new Card("Nine", "Diamond");
+//            cards[4] = new Card("Ace", "Spade");
+              DeckOfCard deckOfCard = new DeckOfCard();
+//              assertFalse(deckOfCard.isPair(cards));
+              assertTrue(deckOfCard.isStraight(cards));
+       }
+
+       @Test
+       public void testThatDeckOfCardCanHaveAFullHouseCardTest(){
+              Card[] cards = new Card[5];
+              cards[0] = new Card("Six", "Diamond");
+              cards[1] = new Card("Six", "Spade");
+              cards[2] = new Card("Six", "Heart");
+              cards[3] = new Card("Four", "Heart");
+              cards[4] = new Card("Four", "Club");
+//            cards[4] = new Card("Ace", "Spade");
+              DeckOfCard deckOfCard = new DeckOfCard();
+//              assertFalse(deckOfCard.isPair(cards));
+              assertTrue(deckOfCard.isFullHouse(cards));
        }
 
 
